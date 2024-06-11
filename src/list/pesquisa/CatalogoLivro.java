@@ -3,11 +3,11 @@ package src.list.pesquisa;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CatalagoLivro {
+public class CatalogoLivro {
 
     private List<Livro> listaLivro = new ArrayList<>();
 
-    public CatalagoLivro() {
+    public CatalogoLivro() {
         this.listaLivro = new ArrayList<Livro>();
     }
 
@@ -55,18 +55,21 @@ public class CatalagoLivro {
 
     @Override
     public String toString() {
-        return "CatalagoLivro [listaLivro=" + listaLivro + "]";
+        return "CatalogoLivro [listaLivro=" + listaLivro + "]";
     }
 
     public static void main(String[] args) {
-        CatalagoLivro catalago = new CatalagoLivro();
+        CatalogoLivro catalogo = new CatalogoLivro();
 
-        catalago.adicionarLivro(new Livro("Batman", "Tainá", 2014));
-        catalago.adicionarLivro(new Livro("Titanic", "Felipe", 2010));
-        catalago.adicionarLivro(new Livro("Barbie", "Cris", 2004));
-        catalago.adicionarLivro(new Livro("Coca-cola", "Well", 2024));
+        catalogo.adicionarLivro(new Livro("Batman", "Tainá", 2014));
+        catalogo.adicionarLivro(new Livro("Titanic", "Felipe", 2010));
+        catalogo.adicionarLivro(new Livro("Barbie", "Cris", 2004));
+        catalogo.adicionarLivro(new Livro("bebida", "Well", 2024));
+        catalogo.adicionarLivro(new Livro("Bebida", "Tainá", 2020));
 
-        System.out.println(catalago.pesquisarPorAutor("Tainá").toString());
+        System.out.println(catalogo.pesquisarPorAutor("Tainá").toString());
+        System.out.println(catalogo.pesquisarIntervaloAnos(2004, 2010).toString());
+        System.out.println(catalogo.pesquisarPorTitulo("Bebida"));
     }
     
 }

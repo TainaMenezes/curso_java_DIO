@@ -7,6 +7,10 @@ public class CatalagoLivro {
 
     private List<Livro> listaLivro = new ArrayList<>();
 
+    public CatalagoLivro() {
+        this.listaLivro = new ArrayList<Livro>();
+    }
+
     public void adicionarLivro(Livro livro)
     {
         listaLivro.add(livro);
